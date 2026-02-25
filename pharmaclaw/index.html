@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PharmaClaw 🧪 - AI-Powered Drug Discovery Pipeline | ClawHub</title>
-<meta name="description" content="PharmaClaw: The accessible entry point to AI-powered drug discovery &amp; catalyst design. 7 chained agents — chemistry, ADME, catalyst design, synthesis, toxicology, IP, market intel. Built on OpenClaw.">
+<meta name="description" content="PharmaClaw: 8 AI agents for end-to-end drug discovery — chemistry, ADME, synthesis, toxicology, catalyst design, literature, IP, market intel. CLI + LangGraph orchestration. Built on OpenClaw.">
 <meta property="og:title" content="PharmaClaw 🧪 AI Drug Discovery Pipeline">
 <meta property="og:description" content="Generate, analyze, synthesize, monitor — 7 chained AI agents for drug discovery.">
 <meta property="og:image" content="https://pharmaclaw.com/og.png">
@@ -21,6 +21,7 @@
 <a href="#pipeline" class="hover:text-claw-purple font-semibold">Pipeline</a>
 <a href="#demo" class="hover:text-claw-purple font-semibold">Demo</a>
 <a href="#pro-features" class="hover:text-claw-purple font-semibold">Pro</a>
+<a href="#cli" class="hover:text-claw-purple font-semibold">CLI</a>
 <a href="#case-study" class="hover:text-claw-purple font-semibold">Case Study</a>
 <a href="#pricing" class="hover:text-claw-purple font-semibold">Pricing</a>
 <a href="#faq" class="hover:text-claw-purple font-semibold">FAQ</a>
@@ -33,11 +34,10 @@
 <section class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-32">
 <div class="max-w-4xl mx-auto">
 <h1 class="text-6xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-gray-900 via-claw-purple to-indigo-900 bg-clip-text text-transparent mb-8 drop-shadow-2xl">PharmaClaw</h1>
-<p class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">AI-Powered Drug Discovery & Catalyst Design</p>
-<p class="text-lg md:text-xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
-  <strong>Generate</strong> molecular insights · <strong>Design</strong> novel catalysts & ligands · <strong>Analyze</strong> ADME & toxicology · <strong>Synthesize</strong> retrosynthesis routes · <strong>Monitor</strong> safety signals — 7 chained AI agents on OpenClaw.
+<p class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">AI-Powered Drug Discovery Pipeline</p>
+<p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+  <strong>Generate</strong> molecular insights · <strong>Analyze</strong> ADME & toxicology · <strong>Synthesize</strong> retrosynthesis routes · <strong>Monitor</strong> safety signals — 8 chained AI agents with CLI + LangGraph orchestration on OpenClaw.
 </p>
-<p class="text-md text-claw-purple font-semibold mb-12 max-w-2xl mx-auto">The accessible entry point to computational chemistry — no $100K software license, no PhD required.</p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center">
 <a href="#demo" class="bg-gradient-to-r from-claw-purple to-indigo-600 text-white px-12 py-6 rounded-3xl text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 transition-all">🔬 Live Demo</a>
 <a href="https://clawhub.com/pharmaclaw" class="border-3 border-claw-purple text-claw-purple px-12 py-6 rounded-3xl text-xl font-bold hover:bg-claw-purple hover:text-white shadow-xl transition-all">Freemium Install</a>
@@ -50,23 +50,14 @@
 <div class="max-w-5xl mx-auto text-center mb-20">
 <h2 class="text-5xl font-black bg-gradient-to-r from-claw-purple to-indigo-600 bg-clip-text text-transparent mb-6">Why PharmaClaw?</h2>
 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-  End-to-end drug discovery in one pipeline. From SMILES input to polished report — Chemistry, Catalyst Design, ADME, Synthesis Planning, Toxicology, IP Analysis, Market Intelligence, and PDF Export. No black box: OpenClaw transparency, real-time data from PubChem, openFDA, and RDKit.
-</p>
-<p class="text-lg text-gray-500 max-w-3xl mx-auto mt-4">
-  Tools like Schrödinger and ChemAxon cost $30K–$500K/year and require specialized training. PharmaClaw gives researchers the same core workflows — <strong>for free or $49/mo</strong> — powered by AI agents anyone can run.
+  End-to-end drug discovery in one pipeline. From SMILES input to polished report — Chemistry, ADME, Synthesis Planning, Toxicology, IP Analysis, Market Intelligence, and PDF Export. No black box: OpenClaw transparency, real-time data from PubChem, openFDA, and RDKit.
 </p>
 </div>
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+<div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
 <div class="text-center p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-xl">
 <div class="text-5xl mb-6">🧪</div>
 <h3 class="text-2xl font-bold mb-4">Chemistry + Synthesis</h3>
 <p>PubChem queries, RDKit properties, retrosynthesis routes with feasibility scoring. SMILES in, actionable chemistry out.</p>
-</div>
-<div class="text-center p-8 rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50 shadow-xl border-2 border-amber-200">
-<div class="text-5xl mb-6">🔧</div>
-<h3 class="text-2xl font-bold mb-4">Catalyst Design</h3>
-<p>Organometallic catalyst recommendation + novel ligand design. Pd, Ru, Rh, Ir, Ni, Cu across 28 reaction types. Steric, electronic, and bioisosteric ligand optimization via RDKit.</p>
-<span class="inline-block mt-3 text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">NEW</span>
 </div>
 <div class="text-center p-8 rounded-3xl bg-gradient-to-br from-indigo-50 to-purple-50 shadow-xl">
 <div class="text-5xl mb-6">💊</div>
@@ -112,12 +103,6 @@
     <p class="mt-3 text-sm font-bold text-teal-700">Synthesis</p>
   </div>
   <div class="text-2xl text-gray-400 mx-1">→</div>
-  <div class="flex flex-col items-center min-w-[100px] relative">
-    <div class="absolute -top-2 -right-2 bg-amber-400 text-[10px] font-black text-white px-1.5 py-0.5 rounded-full">NEW</div>
-    <div class="w-16 h-16 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-2xl shadow-lg">🔧</div>
-    <p class="mt-3 text-sm font-bold text-orange-700">Catalyst</p>
-  </div>
-  <div class="text-2xl text-gray-400 mx-1">→</div>
   <div class="flex flex-col items-center min-w-[100px]">
     <div class="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl shadow-lg">💼</div>
     <p class="mt-3 text-sm font-bold text-amber-700">IP Check</p>
@@ -158,11 +143,6 @@
   <div class="flex items-center gap-4 w-full max-w-xs">
     <div class="w-14 h-14 rounded-2xl bg-teal-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0">🔬</div>
     <p class="font-bold text-teal-700">Synthesis</p>
-  </div>
-  <div class="text-2xl text-gray-400">↓</div>
-  <div class="flex items-center gap-4 w-full max-w-xs">
-    <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0">🔧</div>
-    <p class="font-bold text-orange-700">Catalyst Design <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full ml-1">NEW</span></p>
   </div>
   <div class="text-2xl text-gray-400">↓</div>
   <div class="flex items-center gap-4 w-full max-w-xs">
@@ -283,6 +263,233 @@
 </div>
 </section>
 
+<!-- CLI & LangGraph Orchestration -->
+<section id="cli" class="py-32 px-4 bg-gradient-to-b from-slate-900 to-gray-900 text-white">
+<div class="max-w-6xl mx-auto">
+  <h2 class="text-5xl font-black text-center mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Command-Line Interface</h2>
+  <p class="text-xl text-center text-slate-300 mb-6 max-w-3xl mx-auto">8 agents. One terminal. JSON in, JSON out. Built for researchers and AI agents alike.</p>
+  <p class="text-center mb-16"><code class="bg-slate-800 px-4 py-2 rounded-xl text-green-400 font-mono text-lg">pip install pharmaclaw-cli</code></p>
+
+  <!-- Terminal Demo -->
+  <div class="max-w-4xl mx-auto mb-20">
+    <div class="bg-gray-950 rounded-2xl shadow-2xl overflow-hidden border border-slate-700">
+      <!-- Terminal header -->
+      <div class="flex items-center gap-2 px-4 py-3 bg-slate-800 border-b border-slate-700">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <span class="ml-3 text-slate-400 text-sm font-mono">pharmaclaw — bash</span>
+      </div>
+      <!-- Terminal body -->
+      <div class="p-6 font-mono text-sm leading-relaxed overflow-x-auto">
+        <p class="text-slate-500"># Full 8-agent pipeline with consensus scoring</p>
+        <p class="text-green-400">$ pharmaclaw langgraph \</p>
+        <p class="text-green-400 pl-6">--smiles "CC1=NN(C(=O)C1=CC2=C(N=C(C=C2)NC3=CC(=NN3C)C(F)(F)F)Cl)C4CC4" \</p>
+        <p class="text-green-400 pl-6">--workflow full --verbose</p>
+        <p class="text-slate-400 mt-3">🔗 LangGraph full pipeline starting...</p>
+        <p class="text-blue-400">  [1/8] Chemistry — molecular properties...</p>
+        <p class="text-purple-400">  [2/8] Pharmacology — ADME/PK profiling...</p>
+        <p class="text-red-400">  [3/8] Toxicology — safety profiling...</p>
+        <p class="text-cyan-400">  [4/8] Synthesis — route planning...</p>
+        <p class="text-orange-400">  [5/8] Catalyst — recommendation...</p>
+        <p class="text-indigo-400">  [6/8] Literature — PubMed search...</p>
+        <p class="text-yellow-400">  [7/8] IP — freedom-to-operate...</p>
+        <p class="text-pink-400">  [8/8] Market Intel — FAERS query...</p>
+        <p class="text-green-400 mt-3">✅ Score: 7.0/10 — GOOD — viable with modifications</p>
+        <p class="text-slate-400 mt-2">Warnings: HIGH IP risk (Tanimoto 1.0)</p>
+        <p class="text-slate-400">Recommendations: bioisosteres, prodrug/salt form, DDI check</p>
+        <p class="text-slate-500 mt-4"># Pipe agents together</p>
+        <p class="text-green-400">$ pharmaclaw chemistry -s "CCO" | pharmaclaw toxicology | jq '.risk'</p>
+        <p class="text-white">"Low"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agent Commands Grid -->
+  <h3 class="text-3xl font-bold text-center mb-12 text-white">Every Agent, One Command</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-20">
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 transition">
+      <div class="text-3xl mb-3">🧪</div>
+      <h4 class="font-bold text-blue-400 mb-2">Chemistry</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw chemistry -s "CCO" --mode props</code>
+      <p class="text-slate-400 text-sm mt-2">MW, LogP, TPSA, retrosynthesis, PubChem, fingerprints, reactions</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-purple-500 transition">
+      <div class="text-3xl mb-3">💊</div>
+      <h4 class="font-bold text-purple-400 mb-2">Pharmacology</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw pharmacology -s "CCO"</code>
+      <p class="text-slate-400 text-sm mt-2">Lipinski, Veber, QED, BBB, CYP3A4, P-gp, PAINS, SA Score</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-red-500 transition">
+      <div class="text-3xl mb-3">☠️</div>
+      <h4 class="font-bold text-red-400 mb-2">Toxicology</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw toxicology -s "CCO"</code>
+      <p class="text-slate-400 text-sm mt-2">Safety profiling, structural alerts, PAINS, risk scoring</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition">
+      <div class="text-3xl mb-3">🔬</div>
+      <h4 class="font-bold text-cyan-400 mb-2">Synthesis</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw synthesis -s "CCO" --steps 3</code>
+      <p class="text-slate-400 text-sm mt-2">Multi-step BRICS retrosynthesis, feasibility scoring</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-orange-500 transition">
+      <div class="text-3xl mb-3">🔧</div>
+      <h4 class="font-bold text-orange-400 mb-2">Catalyst Design</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw catalyst --reaction suzuki</code>
+      <p class="text-slate-400 text-sm mt-2">28 reaction types, Pd/Ru/Ni/Cu catalysts, novel ligand design</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-indigo-500 transition">
+      <div class="text-3xl mb-3">📚</div>
+      <h4 class="font-bold text-indigo-400 mb-2">Literature</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw literature -q "KRAS 2026"</code>
+      <p class="text-slate-400 text-sm mt-2">PubMed + Semantic Scholar, TLDRs, citations, open-access PDFs</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-yellow-500 transition">
+      <div class="text-3xl mb-3">💼</div>
+      <h4 class="font-bold text-yellow-400 mb-2">IP Check</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw ip -s "CCO" --bioisosteres</code>
+      <p class="text-slate-400 text-sm mt-2">FTO analysis, Tanimoto similarity, bioisostere suggestions</p>
+    </div>
+    <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 hover:border-pink-500 transition">
+      <div class="text-3xl mb-3">📊</div>
+      <h4 class="font-bold text-pink-400 mb-2">Market Intel</h4>
+      <code class="text-xs text-slate-300 block">pharmaclaw market --drug sotorasib</code>
+      <p class="text-slate-400 text-sm mt-2">FDA FAERS adverse events, trends, prediction markets</p>
+    </div>
+  </div>
+
+  <!-- LangGraph Section -->
+  <div class="max-w-5xl mx-auto mb-20">
+    <h3 class="text-3xl font-bold text-center mb-4 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">LangGraph Multi-Agent Orchestration</h3>
+    <p class="text-center text-slate-300 mb-12 max-w-2xl mx-auto">Stateful pipelines with dynamic routing, self-correction, and consensus scoring — powered by LangChain + LangGraph.</p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Workflows -->
+      <div class="bg-slate-800/60 rounded-2xl p-8 border border-slate-700">
+        <h4 class="text-xl font-bold text-green-400 mb-6">4 Workflows</h4>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="text-white font-bold">full</span>
+              <span class="text-slate-400 text-sm ml-2">— All 8 agents + conditional routing</span>
+            </div>
+            <span class="text-slate-500 text-sm">~10s</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="text-white font-bold">quick</span>
+              <span class="text-slate-400 text-sm ml-2">— Chemistry + Toxicology</span>
+            </div>
+            <span class="text-slate-500 text-sm">~2s</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="text-white font-bold">safety</span>
+              <span class="text-slate-400 text-sm ml-2">— Chem + Pharm + Tox</span>
+            </div>
+            <span class="text-slate-500 text-sm">~4s</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <div>
+              <span class="text-white font-bold">synthesis</span>
+              <span class="text-slate-400 text-sm ml-2">— Chem + Synth + Catalyst</span>
+            </div>
+            <span class="text-slate-500 text-sm">~5s</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smart Features -->
+      <div class="bg-slate-800/60 rounded-2xl p-8 border border-slate-700">
+        <h4 class="text-xl font-bold text-cyan-400 mb-6">Smart Features</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="text-green-400 text-lg">⚡</span>
+            <div>
+              <span class="text-white font-bold">Dynamic Routing</span>
+              <p class="text-slate-400 text-sm">High tox risk? Auto-reroutes to Pharmacology for derivative suggestions</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-green-400 text-lg">🔄</span>
+            <div>
+              <span class="text-white font-bold">Self-Correction</span>
+              <p class="text-slate-400 text-sm">SMILES validation, error recovery, retry tracking</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-green-400 text-lg">🎯</span>
+            <div>
+              <span class="text-white font-bold">Consensus Scoring</span>
+              <p class="text-slate-400 text-sm">0–10 score with verdict, warnings, and actionable recommendations</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-green-400 text-lg">🤖</span>
+            <div>
+              <span class="text-white font-bold">Agent-Native</span>
+              <p class="text-slate-400 text-sm">JSON in/out — any AI framework can plug in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scoring -->
+    <div class="bg-gradient-to-r from-slate-800 to-slate-800/60 rounded-2xl p-8 border border-slate-700">
+      <h4 class="text-xl font-bold text-center text-white mb-6">Consensus Scoring</h4>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-green-500/20 rounded-xl p-4 border border-green-500/30">
+          <div class="text-3xl font-black text-green-400">8–10</div>
+          <div class="text-green-300 font-bold text-sm mt-1">EXCELLENT</div>
+          <div class="text-slate-400 text-xs">Strong candidate</div>
+        </div>
+        <div class="bg-blue-500/20 rounded-xl p-4 border border-blue-500/30">
+          <div class="text-3xl font-black text-blue-400">6–7</div>
+          <div class="text-blue-300 font-bold text-sm mt-1">GOOD</div>
+          <div class="text-slate-400 text-xs">Viable with mods</div>
+        </div>
+        <div class="bg-yellow-500/20 rounded-xl p-4 border border-yellow-500/30">
+          <div class="text-3xl font-black text-yellow-400">4–5</div>
+          <div class="text-yellow-300 font-bold text-sm mt-1">FAIR</div>
+          <div class="text-slate-400 text-xs">Needs improvement</div>
+        </div>
+        <div class="bg-red-500/20 rounded-xl p-4 border border-red-500/30">
+          <div class="text-3xl font-black text-red-400">0–3</div>
+          <div class="text-red-300 font-bold text-sm mt-1">POOR</div>
+          <div class="text-slate-400 text-xs">Major concerns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Utility Commands -->
+  <div class="max-w-4xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-12 text-white">Utility Commands</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-slate-800/60 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-2xl mb-2">⚖️</div>
+        <h4 class="font-bold text-white mb-1">Compare</h4>
+        <code class="text-xs text-green-400 block mb-2">pharmaclaw compare -s "A,B,C"</code>
+        <p class="text-slate-400 text-sm">Side-by-side multi-compound analysis</p>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-2xl mb-2">📦</div>
+        <h4 class="font-bold text-white mb-1">Batch</h4>
+        <code class="text-xs text-green-400 block mb-2">pharmaclaw batch -f compounds.csv</code>
+        <p class="text-slate-400 text-sm">Process up to 500 compounds from CSV</p>
+      </div>
+      <div class="bg-slate-800/60 rounded-xl p-6 border border-slate-700 text-center">
+        <div class="text-2xl mb-2">📄</div>
+        <h4 class="font-bold text-white mb-1">Report</h4>
+        <code class="text-xs text-green-400 block mb-2">pharmaclaw report -s "CCO" -o out.json</code>
+        <p class="text-slate-400 text-sm">Full pipeline → JSON report file</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
 <!-- Case Study -->
 <section id="case-study" class="py-32 px-4 bg-gradient-to-b from-slate-800 to-slate-900 text-white">
 <div class="max-w-6xl mx-auto">
@@ -319,8 +526,6 @@
       <div class="flex items-center gap-2 bg-red-500/20 border border-red-400/40 rounded-xl px-4 py-3"><span class="text-xl">☠️</span><span class="font-semibold text-sm">Toxicology</span><span class="text-green-400">✅</span></div>
       <div class="text-slate-500 hidden md:flex items-center">→</div>
       <div class="flex items-center gap-2 bg-teal-500/20 border border-teal-400/40 rounded-xl px-4 py-3"><span class="text-xl">🔬</span><span class="font-semibold text-sm">Synthesis</span><span class="text-green-400">✅</span></div>
-      <div class="text-slate-500 hidden md:flex items-center">→</div>
-      <div class="flex items-center gap-2 bg-orange-500/20 border border-orange-400/40 rounded-xl px-4 py-3"><span class="text-xl">🔧</span><span class="font-semibold text-sm">Catalyst</span><span class="text-green-400">✅</span></div>
       <div class="text-slate-500 hidden md:flex items-center">→</div>
       <div class="flex items-center gap-2 bg-indigo-500/20 border border-indigo-400/40 rounded-xl px-4 py-3"><span class="text-xl">📊</span><span class="font-semibold text-sm">Market Intel</span><span class="text-green-400">✅</span></div>
       <div class="text-slate-500 hidden md:flex items-center">→</div>

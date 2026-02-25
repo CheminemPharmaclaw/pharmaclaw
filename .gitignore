@@ -1,2 +1,48 @@
-api/__pycache__/
+# OpenClaw workspace files (private)
+.openclaw/
+.clawhub/
+AGENTS.md
+SOUL.md
+USER.md
+TOOLS.md
+IDENTITY.md
+MEMORY.md
+HEARTBEAT.md
+memory/
+
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual envs
+aizynthfinder_env/
+aizynthfinder_data/
+venv/
+.venv/
+
+# Temp/scratch files
+*.png
+*.jpg
+analog.png
+Analog*.png
+erlotinib.png
+admet.py
+admet_props.py
+brics_synth.py
+check_rdkit.py
+compute_properties.py
+draw_molecules.py
+data/
+chemistry-query-v1.4/
+chemistry-query.skill
+drug-team/
+"USER.md Notes section update?"
+
+# OS
+.DS_Store
+Thumbs.db
