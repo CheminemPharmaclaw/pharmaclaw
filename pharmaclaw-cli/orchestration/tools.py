@@ -98,6 +98,61 @@ def pubchem_lookup(compound: str, query_type: str = "info") -> dict:
 
 
 # ─────────────────────────────────────────────
+# CHEMINFORMATICS TOOLS
+# ─────────────────────────────────────────────
+@tool
+def cheminformatics_profile(smiles: str, actions: str = "conformers,pharmacophore,recap,stereoisomers,formats") -> dict:
+    """Run full cheminformatics profile: 3D conformers (ETKDG+MMFF), pharmacophore features, RECAP fragmentation, stereoisomer enumeration, format conversion. Returns comprehensive structural analysis."""
+    err = _validate_smiles(smiles)
+    if err:
+        return {"error": err}
+    action_list = [a.strip() for a in actions.split(",")]
+    input_json = json.dumps({"smiles": smiles, "actions": action_list})
+    return _run_script("pharmaclaw-cheminformatics", "chain_entry.py",
+                       ["--input-json", input_json], timeout=90)
+
+
+@tool
+def conformer_generate(smiles: str, num_confs: int = 20, optimize: str = "mmff") -> dict:
+    """Generate 3D conformer ensemble using ETKDG with MMFF/UFF optimization. Returns conformer energies, RMSD matrix, and statistics."""
+    err = _validate_smiles(smiles)
+    if err:
+        return {"error": err}
+    return _run_script("pharmaclaw-cheminformatics", "conformer_gen.py",
+                       ["--smiles", smiles, "--num_confs", str(num_confs), "--optimize", optimize, "--action", "generate"])
+
+
+@tool
+def pharmacophore_features(smiles: str) -> dict:
+    """Extract pharmacophore features (HBD, HBA, hydrophobic, aromatic, ionizable) from a molecule. Returns feature counts, positions, and pharmacophore fingerprint."""
+    err = _validate_smiles(smiles)
+    if err:
+        return {"error": err}
+    return _run_script("pharmaclaw-cheminformatics", "pharmacophore.py",
+                       ["--smiles", smiles, "--action", "features"])
+
+
+@tool
+def recap_fragment(smiles: str) -> dict:
+    """Fragment molecule at synthetically accessible bonds using RECAP rules. Returns fragment tree, leaf nodes for combinatorial library design."""
+    err = _validate_smiles(smiles)
+    if err:
+        return {"error": err}
+    return _run_script("pharmaclaw-cheminformatics", "recap_fragment.py",
+                       ["--smiles", smiles, "--action", "leaves"])
+
+
+@tool
+def stereoisomer_enumerate(smiles: str, max_isomers: int = 32) -> dict:
+    """Enumerate all stereoisomers (R/S, E/Z) for a molecule. Identifies chiral centers and double bond geometries."""
+    err = _validate_smiles(smiles)
+    if err:
+        return {"error": err}
+    return _run_script("pharmaclaw-cheminformatics", "stereoisomers.py",
+                       ["--smiles", smiles, "--action", "enumerate", "--max_isomers", str(max_isomers)])
+
+
+# ─────────────────────────────────────────────
 # PHARMACOLOGY TOOL
 # ─────────────────────────────────────────────
 @tool
@@ -266,6 +321,11 @@ ALL_TOOLS = [
     chemistry_plan,
     chemistry_similarity,
     pubchem_lookup,
+    cheminformatics_profile,
+    conformer_generate,
+    pharmacophore_features,
+    recap_fragment,
+    stereoisomer_enumerate,
     pharmacology_profile,
     toxicology_analyze,
     synthesis_plan,

@@ -43,6 +43,24 @@ chemistry-query.skill
 drug-team/
 "USER.md Notes section update?"
 
+# Media (large files, not for git)
+*.mp4
+*.mp3
+*.wav
+poc_audio/
+poc_*_frames/
+full_demo_audio/
+full_frames/
+poc_v2_audio/
+poc_v2_frames/
+poc_v3_frames/
+
+# Nested repo (avoid submodule issues)
+pharmaclaw/pharmaclaw/
+
+# Backup files
+*.bak
+
 # OS
 .DS_Store
 Thumbs.db

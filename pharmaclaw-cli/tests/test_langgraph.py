@@ -66,6 +66,31 @@ def test_full_workflow():
     print(f"✅ full workflow: {len(agents)} agents, score={d['consensus']['score']}/10 — {d['consensus']['verdict']}")
 
 
+def test_cheminformatics_integration():
+    """Test that cheminformatics agent is wired in and enriches molecule_profile."""
+    r = run_cmd(["langgraph", "--smiles", ASPIRIN, "--workflow", "full"])
+    assert r["exit_code"] == 0
+    d = r["data"]
+    assert "cheminformatics" in d, "Cheminformatics agent not in output"
+    ci = d["cheminformatics"]
+    assert ci.get("status") == "success", f"Cheminformatics failed: {ci.get('error', ci.get('status'))}"
+    report = ci.get("report", {})
+    assert "conformers" in report, "No conformer data"
+    assert "pharmacophore" in report, "No pharmacophore data"
+    assert "recap" in report, "No RECAP data"
+    assert "stereoisomers" in report, "No stereoisomer data"
+    # Check profile enrichment
+    profile = d.get("molecule_profile", {})
+    assert profile.get("has_3d_conformers") is True, "Conformers not in molecule_profile"
+    assert "pharmacophore_features" in profile, "Pharmacophore features not in profile"
+    agents = d.get("agents_consulted", [])
+    assert "cheminformatics" in agents, f"Cheminformatics not in route: {agents}"
+    print(f"✅ cheminformatics integration: conformers={profile.get('num_conformers')}, "
+          f"pharmacophore={profile.get('pharmacophore_features', {})}, "
+          f"recap_frags={profile.get('recap_fragments')}, "
+          f"stereoisomers={profile.get('num_stereoisomers')}")
+
+
 def test_consensus_scoring():
     """Test that sotorasib gets HIGH IP risk (it's in the reference set)."""
     r = run_cmd(["langgraph", "--smiles", SOTORASIB, "--workflow", "quick"])
@@ -83,6 +108,7 @@ if __name__ == "__main__":
         test_safety_workflow,
         test_synthesis_workflow,
         test_full_workflow,
+        test_cheminformatics_integration,
         test_consensus_scoring,
     ]
 

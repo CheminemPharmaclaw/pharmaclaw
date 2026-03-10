@@ -9,10 +9,10 @@ import re
 import sys
 
 def get_drug_name_from_smiles(smiles):
-    \"\"\"Resolve SMILES to primary drug name via PubChem API.\"\"\"
+    """Resolve SMILES to primary drug name via PubChem API."""
     try:
         # Get CID from SMILES (strict canonical)
-        cid_url = f\"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/{smiles}/cids/JSON\"
+        cid_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/{smiles}/cids/JSON"
         cid_resp = requests.get(cid_url, timeout=10)
         if cid_resp.status_code != 200:
             return None
@@ -22,7 +22,7 @@ def get_drug_name_from_smiles(smiles):
         cid = cids[0]
         
         # Get synonyms
-        syn_url = f\"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{cid}/synonyms/JSON\"
+        syn_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{cid}/synonyms/JSON"
         syn_resp = requests.get(syn_url, timeout=10)
         if syn_resp.status_code != 200:
             return None
@@ -39,10 +39,10 @@ def get_drug_name_from_smiles(smiles):
     return None
 
 def query_faers(drug_query, count_field=None, limit=100):
-    \"\"\"Query openFDA FAERS API.\"\"\"
-    base_url = \"https://api.fda.gov/drug/event.json\"
+    """Query openFDA FAERS API."""
+    base_url = "https://api.fda.gov/drug/event.json"
     params = {
-        'search': f'patient.drug.medicinalproduct:\"{drug_query}\"',
+        'search': f'patient.drug.medicinalproduct:"{drug_query}"',
         'limit': limit
     }
     if count_field:
@@ -69,15 +69,15 @@ def main():
 
     # Resolve SMILES if looks like one
     if re.search(r'^[A-Za-z0-9#\(\)=\[\]@+\-%/.]+$', drug_name) and len(drug_name) > 3 and not drug_name.isalpha():
-        print(f\"Resolving SMILES '{drug_name}' to drug name...\", file=sys.stderr)
+        print(f"Resolving SMILES '{drug_name}' to drug name...", file=sys.stderr)
         resolved = get_drug_name_from_smiles(drug_name)
         if resolved:
             drug_name = resolved
-            print(f\"Resolved to: {drug_name}\", file=sys.stderr)
+            print(f"Resolved to: {drug_name}", file=sys.stderr)
         else:
-            print(f\"Failed to resolve SMILES '{args.drug}', using as-is.\", file=sys.stderr)
+            print(f"Failed to resolve SMILES '{args.drug}', using as-is.", file=sys.stderr)
 
-    print(f\"Querying FAERS for drug: {drug_name}\", file=sys.stderr)
+    print(f"Querying FAERS for drug: {drug_name}", file=sys.stderr)
 
     results = {}
 
@@ -101,7 +101,7 @@ def main():
             plt.savefig(os.path.join(args.output, f'{drug_name}_yearly_trends.png'), dpi=150, bbox_inches='tight')
             plt.close()
     except Exception as e:
-        print(f\"Error generating yearly trends: {e}\", file=sys.stderr)
+        print(f"Error generating yearly trends: {e}", file=sys.stderr)
 
     # 2. Top reactions
     try:
@@ -120,7 +120,7 @@ def main():
             plt.savefig(os.path.join(args.output, f'{drug_name}_top_reactions.png'), dpi=150, bbox_inches='tight')
             plt.close()
     except Exception as e:
-        print(f\"Error generating top reactions: {e}\", file=sys.stderr)
+        print(f"Error generating top reactions: {e}", file=sys.stderr)
 
     # 3. Top outcomes
     try:
@@ -139,7 +139,7 @@ def main():
             plt.savefig(os.path.join(args.output, f'{drug_name}_top_outcomes.png'), dpi=150, bbox_inches='tight')
             plt.close()
     except Exception as e:
-        print(f\"Error generating top outcomes: {e}\", file=sys.stderr)
+        print(f"Error generating top outcomes: {e}", file=sys.stderr)
 
     # 4. Recent events list (limited)
     try:
@@ -149,15 +149,15 @@ def main():
             json.dump(events_data, f, indent=2)
         results['recent_events_count'] = len(events_data.get('results', []))
     except Exception as e:
-        print(f\"Error fetching events list: {e}\", file=sys.stderr)
+        print(f"Error fetching events list: {e}", file=sys.stderr)
 
     # Summary JSON
     summary_path = os.path.join(args.output, f'{drug_name}_summary.json')
     with open(summary_path, 'w') as f:
         json.dump(results, f, indent=2)
 
-    print(f\"Analysis complete. Files saved to: {args.output}/\", file=sys.stdout)
-    print(f\"Summary: {summary_path}\", file=sys.stdout)
+    print(f"Analysis complete. Files saved to: {args.output}/", file=sys.stdout)
+    print(f"Summary: {summary_path}", file=sys.stdout)
 
 if __name__ == '__main__':
     main()
