@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Received | PharmaClaw 🧪</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = {theme: {extend: {colors: {'claw-purple': '#667eea'}}}}</script>
+<style>
+  @keyframes checkPop { 0%{transform:scale(0)} 50%{transform:scale(1.2)} 100%{transform:scale(1)} }
+  .check-pop { animation: checkPop 0.5s ease-out; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .fade-up { animation: fadeUp 0.6s ease-out 0.3s both; }
+</style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen flex items-center justify-center px-4">
+
+<div class="max-w-lg mx-auto text-center">
+  <!-- Success Icon -->
+  <div class="check-pop w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl">
+    <span class="text-5xl text-white">✓</span>
+  </div>
+
+  <div class="fade-up">
+    <h1 class="text-3xl font-black text-gray-900 mb-4">Order Received! 🧪</h1>
+    <p class="text-lg text-gray-600 mb-4">
+      We've received your compound details. Complete your payment below to start the analysis.
+    </p>
+
+    <!-- Payment Button -->
+    <a href="https://buy.stripe.com/test_fZu3cv35K9P1gyY3xedUY00" target="_blank"
+       class="inline-block w-full max-w-sm bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 mb-8">
+      💳 Pay $99 — Start Analysis
+    </a>
+    <p class="text-xs text-gray-400 mb-8">Secure payment via Stripe. You'll receive a receipt by email.</p>
+
+    <div class="bg-white rounded-xl p-6 shadow-md border border-gray-100 text-left space-y-3">
+      <h3 class="font-bold text-gray-900 text-center">What happens next?</h3>
+      <div class="flex items-start gap-3">
+        <span class="text-lg">1️⃣</span>
+        <p class="text-sm text-gray-600">Complete payment using the button above ($99 one-time)</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-lg">2️⃣</span>
+        <p class="text-sm text-gray-600">We validate your SMILES and run the full 9-agent pipeline</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-lg">3️⃣</span>
+        <p class="text-sm text-gray-600">Your PDF report is delivered to your email within 24-48 hours</p>
+      </div>
+    </div>
+
+    <p class="text-sm text-gray-500 mt-6">
+      Questions? Email <a href="mailto:cheminem602@gmail.com" class="text-claw-purple hover:underline">cheminem602@gmail.com</a>
+    </p>
+
+    <a href="index.html" class="inline-block mt-4 text-claw-purple font-semibold hover:underline">← Back to PharmaClaw</a>
+  </div>
+</div>
+
+</body>
+</html>

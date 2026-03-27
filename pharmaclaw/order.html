@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order a Drug Discovery Report | PharmaClaw 🧪</title>
+<meta name="description" content="Get a comprehensive AI-powered drug discovery report for your compound. ADME, toxicology, synthesis routes, IP analysis, and more — $99 per report.">
+<meta property="og:title" content="Order a Drug Discovery Report | PharmaClaw">
+<meta property="og:description" content="Full 9-agent pipeline analysis of your compound. ADME, tox, synthesis, IP, market intel — delivered as a PDF report.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = {theme: {extend: {colors: {'claw-purple': '#667eea', 'claw-dark': '#1e1b4b'}}}}</script>
+<style>
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  .float { animation: float 3s ease-in-out infinite; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .fade-up { animation: fadeUp 0.6s ease-out; }
+  .fade-up-d1 { animation: fadeUp 0.6s ease-out 0.1s both; }
+  .fade-up-d2 { animation: fadeUp 0.6s ease-out 0.2s both; }
+  .fade-up-d3 { animation: fadeUp 0.6s ease-out 0.3s both; }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.3);
+    border-color: #667eea;
+  }
+  .form-input {
+    transition: all 0.2s ease;
+  }
+  .submit-btn {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+  }
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+  .what-you-get-item {
+    transition: transform 0.2s ease;
+  }
+  .what-you-get-item:hover {
+    transform: translateX(4px);
+  }
+</style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen">
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-lg border-b">
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+  <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-claw-purple to-indigo-600 bg-clip-text text-transparent">PharmaClaw</a>
+  <div class="hidden md:flex gap-6">
+    <a href="index.html" class="hover:text-claw-purple font-semibold">Home</a>
+    <a href="index.html#pipeline" class="hover:text-claw-purple font-semibold">Pipeline</a>
+    <a href="index.html#pricing" class="hover:text-claw-purple font-semibold">Pricing</a>
+    <a href="index.html#faq" class="hover:text-claw-purple font-semibold">FAQ</a>
+  </div>
+  <a href="#order-form" class="bg-claw-purple text-white px-6 py-2 rounded-xl font-bold hover:bg-purple-700 transition">Order Now</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="py-16 px-4 text-center">
+  <div class="max-w-3xl mx-auto fade-up">
+    <span class="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg mb-6">
+      🧪 Reports-as-a-Service
+    </span>
+    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+      AI Drug Discovery Report
+    </h1>
+    <p class="text-xl text-gray-600 mb-2">
+      Your compound. Our 9-agent pipeline. One comprehensive PDF.
+    </p>
+    <p class="text-3xl font-black bg-gradient-to-r from-claw-purple to-indigo-600 bg-clip-text text-transparent mt-6">
+      $99 per report
+    </p>
+  </div>
+</section>
+
+<!-- What You Get -->
+<section class="py-12 px-4">
+  <div class="max-w-4xl mx-auto fade-up-d1">
+    <h2 class="text-2xl font-bold text-center text-gray-900 mb-8">What's in Your Report</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">⚗️</span>
+        <div>
+          <h3 class="font-bold text-gray-900">Chemistry Profile</h3>
+          <p class="text-sm text-gray-600">Full molecular properties, descriptors, 2D structure visualization, standardization</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">🧬</span>
+        <div>
+          <h3 class="font-bold text-gray-900">3D Cheminformatics</h3>
+          <p class="text-sm text-gray-600">Conformer analysis, pharmacophore mapping, RECAP fragments, stereoisomers</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">💊</span>
+        <div>
+          <h3 class="font-bold text-gray-900">ADME/PK Profile</h3>
+          <p class="text-sm text-gray-600">Lipinski, Veber, QED, BBB permeability, solubility, CYP inhibition, bioavailability</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">☠️</span>
+        <div>
+          <h3 class="font-bold text-gray-900">Toxicology & Safety</h3>
+          <p class="text-sm text-gray-600">PAINS alerts, structural flags, risk classification, ADMET descriptors</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">🔬</span>
+        <div>
+          <h3 class="font-bold text-gray-900">Synthesis Routes</h3>
+          <p class="text-sm text-gray-600">Retrosynthetic analysis, BRICS disconnections, multi-step planning</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">⚙️</span>
+        <div>
+          <h3 class="font-bold text-gray-900">Catalyst Recommendations</h3>
+          <p class="text-sm text-gray-600">Optimal catalysts for each reaction step, novel ligand designs</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">📋</span>
+        <div>
+          <h3 class="font-bold text-gray-900">IP & Patent Analysis</h3>
+          <p class="text-sm text-gray-600">FTO assessment, similarity search, derivative suggestions, patent risk</p>
+        </div>
+      </div>
+      <div class="what-you-get-item bg-white rounded-xl p-5 shadow-md border border-gray-100 flex items-start gap-4">
+        <span class="text-2xl">📊</span>
+        <div>
+          <h3 class="font-bold text-gray-900">Market Intelligence</h3>
+          <p class="text-sm text-gray-600">FDA FAERS data, adverse event trends, competitive landscape</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 rounded-full px-6 py-3">
+        <span class="text-lg">🎯</span>
+        <span class="text-sm font-semibold text-indigo-800">Final consensus score (0-10) with actionable recommendations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Order Form -->
+<section id="order-form" class="py-16 px-4">
+  <div class="max-w-2xl mx-auto fade-up-d2">
+    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+      <!-- Form Header -->
+      <div class="bg-gradient-to-r from-claw-purple to-indigo-600 p-6 text-white text-center">
+        <h2 class="text-2xl font-bold">Request Your Report</h2>
+        <p class="text-indigo-200 text-sm mt-1">Fill in your compound details below</p>
+      </div>
+
+      <!-- The Form -->
+      <form id="report-form" class="p-8 space-y-6" action="https://formspree.io/f/xykbzjvr" method="POST">
+        <!-- Hidden fields for tracking -->
+        <input type="hidden" name="_subject" value="🧪 New PharmaClaw Report Order">
+        <input type="hidden" name="_next" value="https://pharmaclaw.com/order-confirm.html">
+
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Dr. Jane Smith"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="jane@university.edu"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400">
+          <p class="text-xs text-gray-500 mt-1">Report will be delivered to this address</p>
+        </div>
+
+        <!-- Organization -->
+        <div>
+          <label for="org" class="block text-sm font-semibold text-gray-700 mb-2">Organization <span class="text-gray-400">(optional)</span></label>
+          <input type="text" id="org" name="organization" placeholder="University of Chemistry"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400">
+        </div>
+
+        <!-- SMILES -->
+        <div>
+          <label for="smiles" class="block text-sm font-semibold text-gray-700 mb-2">SMILES String <span class="text-red-500">*</span></label>
+          <input type="text" id="smiles" name="smiles" required
+            placeholder="e.g. CC(=O)Oc1ccccc1C(=O)O"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400 font-mono text-sm">
+          <p class="text-xs text-gray-500 mt-1">Valid SMILES notation for your compound</p>
+        </div>
+
+        <!-- Disease Target -->
+        <div>
+          <label for="disease" class="block text-sm font-semibold text-gray-700 mb-2">Disease / Therapeutic Target <span class="text-red-500">*</span></label>
+          <input type="text" id="disease" name="disease_target" required
+            placeholder="e.g. Non-small cell lung cancer (KRAS G12C)"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400">
+        </div>
+
+        <!-- Report Focus -->
+        <div>
+          <label for="focus" class="block text-sm font-semibold text-gray-700 mb-2">Report Focus <span class="text-gray-400">(optional)</span></label>
+          <select id="focus" name="report_focus"
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 bg-white">
+            <option value="full">Full Pipeline (all 9 agents)</option>
+            <option value="safety">Safety Focus (Chemistry + ADME + Tox)</option>
+            <option value="synthesis">Synthesis Focus (Chemistry + Synthesis + Catalyst)</option>
+            <option value="ip">IP Focus (Chemistry + IP + Market)</option>
+          </select>
+        </div>
+
+        <!-- Additional Notes -->
+        <div>
+          <label for="notes" class="block text-sm font-semibold text-gray-700 mb-2">Additional Notes <span class="text-gray-400">(optional)</span></label>
+          <textarea id="notes" name="notes" rows="3"
+            placeholder="Any specific questions, known properties, or areas of concern..."
+            class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400 resize-none"></textarea>
+        </div>
+
+        <!-- Terms -->
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="terms" required class="mt-1 accent-claw-purple">
+          <label for="terms" class="text-sm text-gray-600">
+            I understand this is an AI-generated analysis for research purposes only, not a substitute for clinical or regulatory evaluation.
+            <span class="text-red-500">*</span>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn w-full py-4 rounded-xl text-white font-bold text-lg">
+          Submit Report Request — $99
+        </button>
+
+        <p class="text-center text-xs text-gray-500">
+          After submitting, we'll email you a secure payment link.<br>
+          Reports are delivered within 24-48 hours of payment.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-16 px-4 bg-white/50">
+  <div class="max-w-4xl mx-auto fade-up-d3">
+    <h2 class="text-2xl font-bold text-center text-gray-900 mb-10">How It Works</h2>
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-2xl">📝</span>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-1">1. Submit</h3>
+        <p class="text-sm text-gray-600">Enter your SMILES and disease target</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-2xl">💳</span>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-1">2. Pay</h3>
+        <p class="text-sm text-gray-600">Secure payment via Stripe ($99)</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-2xl">🧪</span>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-1">3. Analyze</h3>
+        <p class="text-sm text-gray-600">9 AI agents run your compound through the full pipeline</p>
+      </div>
+      <div>
+        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
+          <span class="text-2xl">📄</span>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-1">4. Receive</h3>
+        <p class="text-sm text-gray-600">PDF report delivered to your inbox within 24-48h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sample Report CTA -->
+<section class="py-12 px-4">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="bg-gradient-to-r from-slate-900 to-indigo-950 rounded-2xl p-8 text-white">
+      <h3 class="text-xl font-bold mb-2">Want to see a sample first?</h3>
+      <p class="text-indigo-300 mb-4 text-sm">Check out our Molecule of the Week — a free weekly report showcasing the full pipeline.</p>
+      <a href="motw/preview.html" class="inline-block bg-white text-indigo-900 font-bold px-6 py-3 rounded-xl hover:bg-indigo-100 transition">
+        View Molecule of the Week →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 px-4 text-center text-sm text-gray-500 border-t">
+  <p>&copy; 2026 PharmaClaw. AI-powered drug discovery.</p>
+  <p class="mt-1">Questions? <a href="mailto:cheminem602@gmail.com" class="text-claw-purple hover:underline">cheminem602@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
