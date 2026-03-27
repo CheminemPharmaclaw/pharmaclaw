@@ -160,10 +160,8 @@
       </div>
 
       <!-- The Form -->
-      <form id="report-form" class="p-8 space-y-6" action="https://formspree.io/f/xykbzjvr" method="POST">
-        <!-- Hidden fields for tracking -->
+      <form id="report-form" class="p-8 space-y-6">
         <input type="hidden" name="_subject" value="🧪 New PharmaClaw Report Order">
-        <input type="hidden" name="_next" value="https://pharmaclaw.com/order-confirm.html">
 
         <!-- Name -->
         <div>
@@ -303,5 +301,32 @@
   <p class="mt-1">Questions? <a href="mailto:cheminem602@gmail.com" class="text-claw-purple hover:underline">cheminem602@gmail.com</a></p>
 </footer>
 
+<script>
+document.getElementById('report-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  const origText = btn.textContent;
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+  try {
+    const resp = await fetch('https://formspree.io/f/xykbzjvr', {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      window.location.href = 'order-confirm.html';
+    } else {
+      alert('Something went wrong. Please try again or email cheminem602@gmail.com');
+      btn.textContent = origText;
+      btn.disabled = false;
+    }
+  } catch (err) {
+    alert('Network error. Please try again.');
+    btn.textContent = origText;
+    btn.disabled = false;
+  }
+});
+</script>
 </body>
 </html>
