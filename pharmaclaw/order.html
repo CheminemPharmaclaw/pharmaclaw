@@ -43,6 +43,7 @@
     transform: translateX(4px);
   }
 </style>
+<script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-indigo-50 min-h-screen">
 
@@ -191,6 +192,17 @@
           <input type="text" id="smiles" name="smiles" required
             placeholder="e.g. CC(=O)Oc1ccccc1C(=O)O"
             class="form-input w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 placeholder-gray-400 font-mono text-sm">
+          <div id="smiles-feedback" class="mt-2 hidden">
+            <div id="smiles-error" class="text-red-500 text-xs font-semibold hidden">⚠️ Invalid SMILES — please check your notation</div>
+            <div id="smiles-valid" class="text-green-600 text-xs font-semibold hidden">✅ Valid SMILES</div>
+          </div>
+          <!-- Live molecule preview -->
+          <div id="mol-preview" class="mt-3 hidden">
+            <div class="bg-white rounded-xl border-2 border-indigo-100 p-3 text-center shadow-inner">
+              <div id="mol-svg" class="flex justify-center"></div>
+              <p id="mol-formula" class="text-xs text-gray-500 mt-2 font-mono"></p>
+            </div>
+          </div>
           <p class="text-xs text-gray-500 mt-1">Valid SMILES notation for your compound</p>
         </div>
 
@@ -287,10 +299,15 @@
   <div class="max-w-2xl mx-auto text-center">
     <div class="bg-gradient-to-r from-slate-900 to-indigo-950 rounded-2xl p-8 text-white">
       <h3 class="text-xl font-bold mb-2">Want to see a sample first?</h3>
-      <p class="text-indigo-300 mb-4 text-sm">Check out our Molecule of the Week — a free weekly report showcasing the full pipeline.</p>
-      <a href="motw/preview.html" class="inline-block bg-white text-indigo-900 font-bold px-6 py-3 rounded-xl hover:bg-indigo-100 transition">
-        View Molecule of the Week →
-      </a>
+      <p class="text-indigo-300 mb-4 text-sm">Download our sample report on Aspirin to see exactly what you'll get.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="sample-report.pdf" target="_blank" class="inline-block bg-white text-indigo-900 font-bold px-6 py-3 rounded-xl hover:bg-indigo-100 transition">
+          📄 Download Sample PDF
+        </a>
+        <a href="motw/preview.html" class="inline-block bg-white/20 text-white border border-white/30 font-bold px-6 py-3 rounded-xl hover:bg-white/30 transition">
+          🧪 Molecule of the Week →
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -302,8 +319,77 @@
 </footer>
 
 <script>
+// RDKit.js SMILES validation + live preview
+let RDKitModule = null;
+window.initRDKitModule().then(function(RDKit) {
+  RDKitModule = RDKit;
+  console.log('RDKit.js loaded');
+});
+
+const smilesInput = document.getElementById('smiles');
+const feedback = document.getElementById('smiles-feedback');
+const errorMsg = document.getElementById('smiles-error');
+const validMsg = document.getElementById('smiles-valid');
+const preview = document.getElementById('mol-preview');
+const molSvg = document.getElementById('mol-svg');
+const molFormula = document.getElementById('mol-formula');
+let debounceTimer;
+
+smilesInput.addEventListener('input', function() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(validateSmiles, 400);
+});
+
+function validateSmiles() {
+  const val = smilesInput.value.trim();
+  if (!val) {
+    feedback.classList.add('hidden');
+    preview.classList.add('hidden');
+    smilesInput.classList.remove('border-red-400', 'border-green-400');
+    return;
+  }
+  if (!RDKitModule) {
+    // RDKit not loaded yet, skip validation
+    return;
+  }
+  feedback.classList.remove('hidden');
+  const mol = RDKitModule.get_mol(val);
+  if (mol && mol.is_valid()) {
+    errorMsg.classList.add('hidden');
+    validMsg.classList.remove('hidden');
+    smilesInput.classList.remove('border-red-400');
+    smilesInput.classList.add('border-green-400');
+    // Render SVG
+    const svg = mol.get_svg_with_highlights(JSON.stringify({
+      width: 300, height: 200
+    }));
+    molSvg.innerHTML = svg;
+    molFormula.textContent = mol.get_molblock().split('\n')[3]?.trim() || '';
+    preview.classList.remove('hidden');
+    mol.delete();
+  } else {
+    validMsg.classList.add('hidden');
+    errorMsg.classList.remove('hidden');
+    smilesInput.classList.remove('border-green-400');
+    smilesInput.classList.add('border-red-400');
+    preview.classList.add('hidden');
+    if (mol) mol.delete();
+  }
+}
+
 document.getElementById('report-form').addEventListener('submit', async function(e) {
   e.preventDefault();
+  // Validate SMILES before submission
+  if (RDKitModule) {
+    const smVal = document.getElementById('smiles').value.trim();
+    const testMol = RDKitModule.get_mol(smVal);
+    if (!testMol || !testMol.is_valid()) {
+      alert('Please enter a valid SMILES string before submitting.');
+      if (testMol) testMol.delete();
+      return;
+    }
+    testMol.delete();
+  }
   const btn = this.querySelector('button[type="submit"]');
   const origText = btn.textContent;
   btn.textContent = 'Submitting...';
