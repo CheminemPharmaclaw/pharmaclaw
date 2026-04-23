@@ -65,13 +65,13 @@ tailwind.config = {
         <!-- Left: Structure -->
         <div class="p-8 lg:p-12 flex flex-col items-center justify-center bg-white/5">
           <div class="bg-white rounded-2xl p-4 shadow-inner w-full max-w-[280px]">
-            <img src="motw/molecule_pcl005.png"
-                 alt="PCL-AI-005 2D Structure (pyrimido[4,5-b]indole covalent EGFR inhibitor)"
+            <img src="motw/molecule_pcl006.png"
+                 alt="PCL-AI-006 2D Structure (naphthyridine-glutarimide cereblon modulator)"
                  class="w-full h-auto object-contain rounded-xl">
           </div>
-          <h2 class="text-3xl font-semibold mt-6 text-white">PCL-AI-005</h2>
-          <p class="text-teal-300 font-medium text-sm mt-1">Pyrimido[4,5-b]indole covalent EGFR inhibitor</p>
-          <p class="font-mono text-xs mt-2 bg-white/10 px-4 py-1 rounded-2xl text-slate-400">C=CC(=O)Nc1ccc2[nH]c3c(Nc4ccc(N5CCN(C)CC5)cc4)ncnc3c2c1</p>
+          <h2 class="text-3xl font-semibold mt-6 text-white">PCL-AI-006</h2>
+          <p class="text-teal-300 font-medium text-sm mt-1">Naphthyridine-glutarimide cereblon E3 ligase modulator (CELMoD)</p>
+          <p class="font-mono text-xs mt-2 bg-white/10 px-4 py-1 rounded-2xl text-slate-400">O=C1CCC(=O)N1CC1=CN=C2C=C(Nc3ccc(N4CCOCC4)cc3)C=CC12</p>
         </div>
 
         <!-- Right: Data -->
@@ -79,22 +79,22 @@ tailwind.config = {
           <div class="mb-6">
             <div class="flex items-center gap-3 mb-3">
               <div>
-                <h3 class="text-xl font-semibold text-white">Non-Small Cell Lung Cancer (NSCLC) · EGFR T790M/C797S</h3>
-                <p class="text-teal-300 text-xs mt-1">Next-generation covalent TKI targeting acquired resistance mutations</p>
+                <h3 class="text-xl font-semibold text-white">Multiple Myeloma · CRBN-mediated IKZF1/IKZF3 degradation</h3>
+                <p class="text-teal-300 text-xs mt-1">Next-generation cereblon modulator for selective Ikaros/Aiolos degradation</p>
               </div>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed">
-              PCL-AI-005 features a pyrimido[4,5-b]indole core (scaffold-hopped from classical quinazoline EGFR inhibitors such as erlotinib, gefitinib, and afatinib) linked to an acrylamide warhead for irreversible covalent engagement of Cys797 in the EGFR kinase domain. This design confers high selectivity for the T790M gatekeeper mutant while minimizing wild-type EGFR inhibition.
+              PCL-AI-006 is a next-generation cereblon E3 ligase modulator (CELMoD) featuring a naphthyridine core linked to a glutarimide warhead for cereblon binding and a morpholine-substituted aniline for improved aqueous solubility. The design replaces the phthalimide/isoindolinone scaffolds of lenalidomide and pomalidomide with a distinct naphthyridine pharmacophore, aiming for enhanced selectivity for IKZF1/IKZF3 (Ikaros/Aiolos) neosubstrate degradation while reducing off-target cereblon substrate engagement — a key liability of current IMiDs.
             </p>
           </div>
 
           <!-- Score -->
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 rounded-xl bg-emerald-600 flex items-center justify-center shadow">
-              <span class="text-xl font-bold">7.0</span>
+              <span class="text-xl font-bold">7.8</span>
             </div>
             <div>
-              <p class="text-sm font-medium text-emerald-400">GOOD — strong drug candidate with covalent mechanism</p>
+              <p class="text-sm font-medium text-emerald-400">GOOD — high drug-likeness with novel CRBN-binding scaffold</p>
               <p class="text-xs text-slate-500">PharmaClaw Consensus Score (0–10)</p>
             </div>
           </div>
@@ -103,27 +103,31 @@ tailwind.config = {
           <div class="grid grid-cols-3 gap-2 mb-6">
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">MW</p>
-              <p class="text-lg font-semibold text-white">427.51</p>
+              <p class="text-lg font-semibold text-white">404.5</p>
             </div>
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">cLogP</p>
-              <p class="text-lg font-semibold text-white">3.73</p>
+              <p class="text-lg font-semibold text-white">2.49</p>
             </div>
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">QED</p>
-              <p class="text-lg font-semibold text-amber-300">0.421</p>
+              <p class="text-lg font-semibold text-emerald-300">0.764</p>
             </div>
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">Tox Risk</p>
-              <p class="text-lg font-semibold text-amber-300">Moderate</p>
+              <p class="text-lg font-semibold text-emerald-400">Low</p>
             </div>
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">IP Risk</p>
               <p class="text-lg font-semibold text-emerald-400">Low</p>
             </div>
             <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
+              <p class="text-[10px] uppercase tracking-widest text-slate-500">TPSA</p>
+              <p class="text-lg font-semibold text-white">74.2</p>
+            </div>
+            <div class="bg-white/5 rounded-lg p-3 text-center border border-white/10">
               <p class="text-[10px] uppercase tracking-widest text-slate-500">Lipinski</p>
-              <p class="text-lg font-semibold text-emerald-400">Pass</p>
+              <p class="text-lg font-semibold text-emerald-400">Pass (0)</p>
             </div>
           </div>
 
@@ -146,10 +150,10 @@ tailwind.config = {
           <div>
             <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Suggested Modifications</p>
             <ul class="text-xs text-slate-300 space-y-1">
-              <li class="flex gap-2"><span class="text-teal-400">→</span> Acrylamide → but-2-ynamide warhead for enhanced C797 selectivity</li>
-              <li class="flex gap-2"><span class="text-teal-400">→</span> N-methylpiperazine → morpholine to lower basicity and CYP3A4 risk</li>
-              <li class="flex gap-2"><span class="text-teal-400">→</span> C5-fluoro substitution on indole to block CYP-mediated oxidation</li>
-              <li class="flex gap-2"><span class="text-teal-400">→</span> Replace aniline NH with ether linkage to reduce PAINS liability</li>
+              <li class="flex gap-2"><span class="text-teal-400">→</span> Glutarimide → 3-fluoroglutarimide for enhanced CRBN binding affinity and metabolic stability</li>
+              <li class="flex gap-2"><span class="text-teal-400">→</span> Aniline NH → amide linker to reduce potential aniline-related genotoxicity</li>
+              <li class="flex gap-2"><span class="text-teal-400">→</span> C6-methyl on naphthyridine to tune IKZF1 vs IKZF3 selectivity ratio</li>
+              <li class="flex gap-2"><span class="text-teal-400">→</span> Morpholine → 3-oxa-8-azabicyclo[3.2.1]octane for reduced hERG liability</li>
             </ul>
           </div>
         </div>
