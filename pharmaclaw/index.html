@@ -10,284 +10,283 @@
 <meta property="og:image" content="https://pharmaclaw.com/og.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          'claw-teal': '#14b8a6',
-          'claw-slate': '#0f172a'
-        }
-      }
-    }
-  }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'claw-teal': '#14b8a6',
+          'claw-slate': '#0f172a'
+        }
+      }
+    }
+  }
 </script>
 <style>
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-  .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-in { animation: fadeIn 0.8s ease-out forwards; }
 </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b">
-  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-    <a href="#" class="text-3xl font-semibold tracking-tighter text-claw-slate">PharmaClaw</a>
-    <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-      <a href="#motw" class="hover:text-claw-teal transition-colors">Molecule of the Week</a>
-      <a href="#pipeline" class="hover:text-claw-teal transition-colors">Pipeline</a>
-      <a href="#demo" class="hover:text-claw-teal transition-colors">Live Demo</a>
-      <a href="#pro" class="hover:text-claw-teal transition-colors">Pro Features</a>
-      <a href="#cli" class="hover:text-claw-teal transition-colors">CLI</a>
-      <a href="#case-study" class="hover:text-claw-teal transition-colors">Case Study</a>
-    </div>
-    <div class="flex items-center gap-x-4">
-      <a href="sample-report.pdf" target="_blank" 
-         class="text-claw-teal font-medium px-5 py-2 rounded-2xl border border-claw-teal/30 hover:bg-teal-50 transition-colors">📄 Sample Report</a>
-      <a href="order.html" 
-         class="bg-claw-teal text-white px-6 py-2 rounded-2xl font-semibold hover:bg-teal-600 transition-colors shadow-sm">Order Full Report — $99</a>
-    </div>
-  </div>
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <a href="#" class="text-3xl font-semibold tracking-tighter text-claw-slate">PharmaClaw</a>
+    <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+      <a href="#motw" class="hover:text-claw-teal transition-colors">Molecule of the Week</a>
+      <a href="#pipeline" class="hover:text-claw-teal transition-colors">Pipeline</a>
+      <a href="#demo" class="hover:text-claw-teal transition-colors">Live Demo</a>
+      <a href="#pro" class="hover:text-claw-teal transition-colors">Pro Features</a>
+      <a href="#cli" class="hover:text-claw-teal transition-colors">CLI</a>
+      <a href="#case-study" class="hover:text-claw-teal transition-colors">Case Study</a>
+    </div>
+    <div class="flex items-center gap-x-4">
+      <a href="sample-report.pdf" target="_blank"
+         class="text-claw-teal font-medium px-5 py-2 rounded-2xl border border-claw-teal/30 hover:bg-teal-50 transition-colors">📄 Sample Report</a>
+      <a href="order.html"
+         class="bg-claw-teal text-white px-6 py-2 rounded-2xl font-semibold hover:bg-teal-600 transition-colors shadow-sm">Order Full Report - $99</a>
+    </div>
+  </div>
 </nav>
 
 <!-- Molecule of the Week -->
 <section id="motw" class="py-16 bg-slate-900 text-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-8">
-      <span class="inline-flex items-center gap-x-2 bg-teal-500/10 text-teal-300 text-sm font-medium px-6 py-2 rounded-3xl">Molecule of the Week • April 22, 2026</span>
-    </div>
-    
-    <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- Structure -->
-        <div class="flex flex-col items-center">
-          <div class="bg-white rounded-3xl p-6 shadow-inner w-full max-w-[320px]">
-            <!-- Placeholder for the long base64 image (removed per user request) -->
-            <img src="https://via.placeholder.com/400x400/ffffff/0ea5e9?text=PCL-AI-005" 
-                 alt="PCL-AI-005 2D Structure (pyrimido[4,5-b]indole covalent EGFR inhibitor)" 
-                 class="w-full h-auto object-contain rounded-2xl">
-          </div>
-          <h2 class="text-4xl font-semibold mt-8 text-white">PCL-AI-005</h2>
-          <p class="text-teal-300 font-medium text-lg">Pyrimido[4,5-b]indole covalent EGFR inhibitor</p>
-          <p class="font-mono text-xs mt-3 bg-white/10 px-4 py-1 rounded-2xl text-slate-300">C=CC(=O)Nc1ccc2[nH]c3c(Nc4ccc(N5CCN(C)CC5)cc4)ncnc3c2c1</p>
-        </div>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-8">
+      <span class="inline-flex items-center gap-x-2 bg-teal-500/10 text-teal-300 text-sm font-medium px-6 py-2 rounded-3xl">Molecule of the Week • April 22, 2026</span>
+    </div>
 
-        <!-- Scientific Profile -->
-        <div class="space-y-8">
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-3xl">🫁</span>
-              <div>
-                <h3 class="text-2xl font-semibold">Non-Small Cell Lung Cancer (NSCLC) • EGFR T790M/C797S</h3>
-                <p class="text-teal-300">Next-generation covalent TKI targeting acquired resistance mutations</p>
-              </div>
-            </div>
-            <p class="text-slate-300 leading-relaxed">
-              PCL-AI-005 features a pyrimido[4,5-b]indole core (scaffold-hopped from classical quinazoline EGFR inhibitors such as erlotinib, gefitinib, and afatinib) linked to an acrylamide warhead for irreversible covalent engagement of Cys797 in the EGFR kinase domain. This design confers high selectivity for the T790M gatekeeper mutant while minimizing wild-type EGFR inhibition.
-            </p>
-          </div>
+    <div class="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 lg:p-12">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-          <!-- Key Properties -->
-          <div class="grid grid-cols-3 gap-4">
-            <div class="bg-white/10 rounded-2xl p-4 text-center">
-              <div class="text-xs tracking-widest text-slate-400">MOLECULAR WEIGHT</div>
-              <div class="text-3xl font-semibold">427.51</div>
-            </div>
-            <div class="bg-white/10 rounded-2xl p-4 text-center">
-              <div class="text-xs tracking-widest text-slate-400">cLogP</div>
-              <div class="text-3xl font-semibold">3.73</div>
-            </div>
-            <div class="bg-white/10 rounded-2xl p-4 text-center">
-              <div class="text-xs tracking-widest text-slate-400">QED</div>
-              <div class="text-3xl font-semibold text-amber-300">0.421</div>
-            </div>
-          </div>
+        <!-- Structure -->
+        <div class="flex flex-col items-center">
+          <div class="bg-white rounded-3xl p-6 shadow-inner w-full max-w-[320px]">
+            <img src="motw/molecule_pcl005.png" 
+                 alt="PCL-AI-005 2D Structure (pyrimido[4,5-b]indole covalent EGFR inhibitor)" 
+                 class="w-full h-auto object-contain rounded-2xl">
+          </div>
+          <h2 class="text-4xl font-semibold mt-8 text-white">PCL-AI-005</h2>
+          <p class="text-teal-300 font-medium text-lg">Pyrimido[4,5-b]indole covalent EGFR inhibitor</p>
+          <p class="font-mono text-xs mt-3 bg-white/10 px-4 py-1 rounded-2xl text-slate-300">C=CC(=O)Nc1ccc2[nH]c3c(Nc4ccc(N5CCN(C)CC5)cc4)ncnc3c2c1</p>
+        </div>
 
-          <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm">
-            <div class="flex items-center gap-2"><span class="text-emerald-400 font-medium">●</span> Lipinski Rule: PASS</div>
-            <div class="flex items-center gap-2"><span class="text-amber-400 font-medium">●</span> Toxicity Risk: Moderate (CYP3A4 substrate potential)</div>
-            <div class="flex items-center gap-2"><span class="text-emerald-400 font-medium">●</span> IP Risk: Low</div>
-          </div>
+        <!-- Scientific Profile -->
+        <div class="space-y-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🫁</span>
+              <div>
+                <h3 class="text-2xl font-semibold">Non-Small Cell Lung Cancer (NSCLC) • EGFR T790M/C797S</h3>
+                <p class="text-teal-300">Next-generation covalent TKI targeting acquired resistance mutations</p>
+              </div>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              PCL-AI-005 features a pyrimido[4,5-b]indole core (scaffold-hopped from classical quinazoline EGFR inhibitors such as erlotinib, gefitinib, and afatinib) linked to an acrylamide warhead for irreversible covalent engagement of Cys797 in the EGFR kinase domain. This design confers high selectivity for the T790M gatekeeper mutant while minimizing wild-type EGFR inhibition.
+            </p>
+          </div>
 
-          <!-- Suggested Modifications (SAR) -->
-          <div>
-            <p class="uppercase text-xs text-slate-400 mb-3 font-medium tracking-widest">Medicinal Chemistry Optimization Opportunities</p>
-            <ul class="space-y-3 text-slate-300 text-sm">
-              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> Acrylamide → but-2-ynamide warhead for enhanced C797 selectivity and reduced off-target cysteine reactivity</li>
-              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> N-methylpiperazine → morpholine to lower basicity and CYP3A4 inhibition liability</li>
-              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> C5-fluoro substitution on indole to block CYP-mediated oxidative metabolism</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+          <!-- Key Properties -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white/10 rounded-2xl p-4 text-center">
+              <div class="text-xs tracking-widest text-slate-400">MOLECULAR WEIGHT</div>
+              <div class="text-3xl font-semibold">427.51</div>
+            </div>
+            <div class="bg-white/10 rounded-2xl p-4 text-center">
+              <div class="text-xs tracking-widest text-slate-400">cLogP</div>
+              <div class="text-3xl font-semibold">3.73</div>
+            </div>
+            <div class="bg-white/10 rounded-2xl p-4 text-center">
+              <div class="text-xs tracking-widest text-slate-400">QED</div>
+              <div class="text-3xl font-semibold text-amber-300">0.421</div>
+            </div>
+          </div>
 
-    <p class="text-center text-xs text-slate-500 mt-8">
-      For research purposes only. All novel molecules require experimental validation, in vitro/in vivo profiling, and regulatory review.
-    </p>
-  </div>
+          <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-medium">●</span> Lipinski Rule: PASS</div>
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-medium">●</span> Toxicity Risk: Moderate (CYP3A4 substrate potential)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-medium">●</span> IP Risk: Low</div>
+          </div>
+
+          <!-- Suggested Modifications (SAR) -->
+          <div>
+            <p class="uppercase text-xs text-slate-400 mb-3 font-medium tracking-widest">Medicinal Chemistry Optimization Opportunities</p>
+            <ul class="space-y-3 text-slate-300 text-sm">
+              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> Acrylamide → but-2-ynamide warhead for enhanced C797 selectivity and reduced off-target cysteine reactivity</li>
+              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> N-methylpiperazine → morpholine to lower basicity and CYP3A4 inhibition liability</li>
+              <li class="flex gap-3"><span class="text-teal-300 font-mono">→</span> C5-fluoro substitution on indole to block CYP-mediated oxidative metabolism</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-slate-500 mt-8">
+      For research purposes only. All novel molecules require experimental validation, in vitro/in vivo profiling, and regulatory review.
+    </p>
+  </div>
 </section>
 
 <!-- Hero -->
 <section class="min-h-screen flex items-center justify-center text-center px-6 pt-20 pb-32 bg-gradient-to-br from-slate-50 via-white to-slate-50">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-claw-slate mb-6">PharmaClaw</h1>
-    <p class="text-3xl font-medium text-slate-700 mb-8">AI-Orchestrated Drug Discovery Pipeline</p>
-    <p class="max-w-2xl mx-auto text-xl text-slate-600 mb-12">
-      Nine domain-specialized agents integrate RDKit cheminformatics, PubChem data, FAERS safety signals, retrosynthetic planning, ADMET profiling, toxicology, IP analysis, and market intelligence — orchestrated by LangGraph on OpenClaw.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#demo" 
-         class="bg-claw-teal text-white px-10 py-5 rounded-3xl text-xl font-semibold shadow-lg hover:shadow-xl transition-all">Launch Live Demo</a>
-      <a href="http://127.0.0.1:19000" target="_blank"
-         class="border border-claw-teal text-claw-teal px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-teal-50 transition-all">Open PharmaLab Dashboard</a>
-      <a href="#install" 
-         class="border border-slate-300 text-slate-700 px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-slate-100 transition-all">pip install pharmaclaw</a>
-    </div>
-  </div>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tighter text-claw-slate mb-6">PharmaClaw</h1>
+    <p class="text-3xl font-medium text-slate-700 mb-8">AI-Orchestrated Drug Discovery Pipeline</p>
+    <p class="max-w-2xl mx-auto text-xl text-slate-600 mb-12">
+      Nine domain-specialized agents integrate RDKit cheminformatics, PubChem data, FAERS safety signals, retrosynthetic planning, ADMET profiling, toxicology, IP analysis, and market intelligence - orchestrated by LangGraph on OpenClaw.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#demo"
+         class="bg-claw-teal text-white px-10 py-5 rounded-3xl text-xl font-semibold shadow-lg hover:shadow-xl transition-all">Launch Live Demo</a>
+      <a href="#pipeline"
+         class="border border-claw-teal text-claw-teal px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-teal-50 transition-all">Explore the Pipeline</a>
+      <a href="#install"
+         class="border border-slate-300 text-slate-700 px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-slate-100 transition-all">pip install pharmaclaw</a>
+    </div>
+  </div>
 </section>
 
 <!-- Install -->
 <section id="install" class="py-24 px-6 bg-white">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-5xl font-semibold tracking-tight mb-4">Install in Three Commands</h2>
-    <p class="text-slate-600 mb-12">Ready for production use on your own infrastructure.</p>
-    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
-        <div class="text-5xl mb-4">1️⃣</div>
-        <h3 class="font-semibold text-xl mb-2">pip install</h3>
-        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pip install pharmaclaw[agents]</code></pre>
-      </div>
-      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
-        <div class="text-5xl mb-4">2️⃣</div>
-        <h3 class="font-semibold text-xl mb-2">Configure</h3>
-        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pharmaclaw setup</code></pre>
-        <p class="text-slate-500 text-sm mt-4">Provide your OpenAI / Anthropic API key</p>
-      </div>
-      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
-        <div class="text-5xl mb-4">3️⃣</div>
-        <h3 class="font-semibold text-xl mb-2">Run</h3>
-        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pharmaclaw ask "Analyze EGFR T790M inhibitor"</code></pre>
-      </div>
-    </div>
-  </div>
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-5xl font-semibold tracking-tight mb-4">Install in Three Commands</h2>
+    <p class="text-slate-600 mb-12">Ready for production use on your own infrastructure.</p>
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
+        <div class="text-5xl mb-4">1️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">pip install</h3>
+        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pip install pharmaclaw[agents]</code></pre>
+      </div>
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
+        <div class="text-5xl mb-4">2️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">Configure</h3>
+        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pharmaclaw setup</code></pre>
+        <p class="text-slate-500 text-sm mt-4">Provide your OpenAI / Anthropic API key</p>
+      </div>
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100">
+        <div class="text-5xl mb-4">3️⃣</div>
+        <h3 class="font-semibold text-xl mb-2">Run</h3>
+        <pre class="bg-slate-900 text-teal-300 font-mono p-6 rounded-2xl text-left text-sm overflow-auto"><code>pharmaclaw ask "Analyze EGFR T790M inhibitor"</code></pre>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- About -->
 <section id="about" class="py-24 px-6 bg-slate-50">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-5xl font-semibold tracking-tight">Purpose-Built for Medicinal Chemistry Teams</h2>
-      <p class="mt-4 max-w-2xl mx-auto text-slate-600">PharmaClaw orchestrates nine autonomous agents that mirror the real drug discovery workflow — grounded in RDKit, PubChem, openFDA, and peer-reviewed methods.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-3xl p-8 shadow-sm">
-        <div class="text-4xl mb-6">🧪</div>
-        <h3 class="font-semibold text-2xl mb-3">Chemistry & Retrosynthesis</h3>
-        <p class="text-slate-600">RDKit property calculation, BRICS retrosynthesis, reaction feasibility scoring, PubChem integration.</p>
-      </div>
-      <div class="bg-white rounded-3xl p-8 shadow-sm">
-        <div class="text-4xl mb-6">🧬</div>
-        <h3 class="font-semibold text-2xl mb-3">Cheminformatics & ADMET</h3>
-        <p class="text-slate-600">3D conformers, pharmacophore mapping, 80+ ADMET descriptors, Lipinski/Veber/QED rules, CYP/P-gp predictions.</p>
-      </div>
-      <div class="bg-white rounded-3xl p-8 shadow-sm">
-        <div class="text-4xl mb-6">☠️</div>
-        <h3 class="font-semibold text-2xl mb-3">Toxicology & IP</h3>
-        <p class="text-slate-600">Structural alerts, PAINS, FAERS signal detection, freedom-to-operate analysis, bioisostere suggestions.</p>
-      </div>
-    </div>
-  </div>
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-semibold tracking-tight">Purpose-Built for Medicinal Chemistry Teams</h2>
+      <p class="mt-4 max-w-2xl mx-auto text-slate-600">PharmaClaw orchestrates nine autonomous agents that mirror the real drug discovery workflow - grounded in RDKit, PubChem, openFDA, and peer-reviewed methods.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl p-8 shadow-sm">
+        <div class="text-4xl mb-6">🧪</div>
+        <h3 class="font-semibold text-2xl mb-3">Chemistry & Retrosynthesis</h3>
+        <p class="text-slate-600">RDKit property calculation, BRICS retrosynthesis, reaction feasibility scoring, PubChem integration.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-sm">
+        <div class="text-4xl mb-6">🧬</div>
+        <h3 class="font-semibold text-2xl mb-3">Cheminformatics & ADMET</h3>
+        <p class="text-slate-600">3D conformers, pharmacophore mapping, 80+ ADMET descriptors, Lipinski/Veber/QED rules, CYP/P-gp predictions.</p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-sm">
+        <div class="text-4xl mb-6">☠️</div>
+        <h3 class="font-semibold text-2xl mb-3">Toxicology & IP</h3>
+        <p class="text-slate-600">Structural alerts, PAINS, FAERS signal detection, freedom-to-operate analysis, bioisostere suggestions.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Pipeline -->
 <section id="pipeline" class="py-24 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-center text-5xl font-semibold tracking-tight mb-16">End-to-End Discovery Pipeline</h2>
-    <div class="hidden md:flex items-center justify-center gap-6 overflow-x-auto pb-8">
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-slate-800 text-white flex items-center justify-center text-3xl">⌨️</div><p class="mt-3 text-sm font-medium">SMILES / Name</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-blue-500 text-white flex items-center justify-center text-3xl">🧪</div><p class="mt-3 text-sm font-medium text-blue-700">Chemistry</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-3xl">🧬</div><p class="mt-3 text-sm font-medium text-cyan-700">Cheminformatics</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-purple-500 text-white flex items-center justify-center text-3xl">💊</div><p class="mt-3 text-sm font-medium text-purple-700">Pharmacology / ADMET</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-red-500 text-white flex items-center justify-center text-3xl">☠️</div><p class="mt-3 text-sm font-medium text-red-700">Toxicology</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-teal-500 text-white flex items-center justify-center text-3xl">🔬</div><p class="mt-3 text-sm font-medium text-teal-700">Synthesis</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500 text-white flex items-center justify-center text-3xl">💼</div><p class="mt-3 text-sm font-medium text-amber-700">IP & FTO</p></div>
-      <div class="text-3xl text-slate-300">→</div>
-      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-green-600 text-white flex items-center justify-center text-3xl">📊</div><p class="mt-3 text-sm font-medium text-green-700">Market / FAERS</p></div>
-    </div>
-  </div>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-center text-5xl font-semibold tracking-tight mb-16">End-to-End Discovery Pipeline</h2>
+    <div class="hidden md:flex items-center justify-center gap-6 overflow-x-auto pb-8">
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-slate-800 text-white flex items-center justify-center text-3xl">⌨️</div><p class="mt-3 text-sm font-medium">SMILES / Name</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-blue-500 text-white flex items-center justify-center text-3xl">🧪</div><p class="mt-3 text-sm font-medium text-blue-700">Chemistry</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-cyan-500 text-white flex items-center justify-center text-3xl">🧬</div><p class="mt-3 text-sm font-medium text-cyan-700">Cheminformatics</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-purple-500 text-white flex items-center justify-center text-3xl">💊</div><p class="mt-3 text-sm font-medium text-purple-700">Pharmacology / ADMET</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-red-500 text-white flex items-center justify-center text-3xl">☠️</div><p class="mt-3 text-sm font-medium text-red-700">Toxicology</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-teal-500 text-white flex items-center justify-center text-3xl">🔬</div><p class="mt-3 text-sm font-medium text-teal-700">Synthesis</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500 text-white flex items-center justify-center text-3xl">💼</div><p class="mt-3 text-sm font-medium text-amber-700">IP & FTO</p></div>
+      <div class="text-3xl text-slate-300">→</div>
+      <div class="text-center min-w-[110px]"><div class="w-14 h-14 mx-auto rounded-2xl bg-green-600 text-white flex items-center justify-center text-3xl">📊</div><p class="mt-3 text-sm font-medium text-green-700">Market / FAERS</p></div>
+    </div>
+  </div>
 </section>
 
 <!-- Demo -->
 <section id="demo" class="py-24 px-6 bg-slate-50">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-center text-5xl font-semibold tracking-tight mb-8">Pro Report Demo</h2>
-    <div class="bg-white rounded-3xl shadow-xl p-10">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-        <button onclick="setDrug('efavirenz')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Efavirenz</button>
-        <button onclick="setDrug('ibuprofen')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Ibuprofen</button>
-        <button onclick="setDrug('aspirin')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Aspirin</button>
-        <button onclick="setDrug('sotorasib')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Sotorasib</button>
-      </div>
-      <button id="runBtn" onclick="runDemo()" disabled class="w-full max-w-md mx-auto block px-16 py-6 bg-gray-400 text-white rounded-3xl font-semibold text-xl cursor-not-allowed">Generate Pro Report</button>
-      <div id="demoOutput" class="mt-12 p-10 bg-slate-50 rounded-3xl border min-h-[700px] overflow-auto prose prose-slate">Select a compound above to generate a full multi-agent report.</div>
-    </div>
-  </div>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-5xl font-semibold tracking-tight mb-8">Pro Report Demo</h2>
+    <div class="bg-white rounded-3xl shadow-xl p-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <button onclick="setDrug('efavirenz')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Efavirenz</button>
+        <button onclick="setDrug('ibuprofen')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Ibuprofen</button>
+        <button onclick="setDrug('aspirin')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Aspirin</button>
+        <button onclick="setDrug('sotorasib')" class="drug-btn p-8 rounded-3xl font-semibold border-2 hover:shadow-xl transition-all">Sotorasib</button>
+      </div>
+      <button id="runBtn" onclick="runDemo()" disabled class="w-full max-w-md mx-auto block px-16 py-6 bg-gray-400 text-white rounded-3xl font-semibold text-xl cursor-not-allowed">Generate Pro Report</button>
+      <div id="demoOutput" class="mt-12 p-10 bg-slate-50 rounded-3xl border min-h-[700px] overflow-auto prose prose-slate">Select a compound above to generate a full multi-agent report.</div>
+    </div>
+  </div>
 </section>
 
 <!-- Pro Features -->
 <section id="pro" class="py-24 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">Pro Features</h2>
-    <p class="text-center text-slate-600 max-w-2xl mx-auto mb-16">Enterprise-grade capabilities for discovery teams.</p>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="p-8 border border-slate-200 rounded-3xl">
-        <div class="text-4xl mb-6">🧬</div>
-        <h3 class="font-semibold text-2xl mb-3">Cheminformatics Agent</h3>
-        <p class="text-slate-600">ETKDG 3D conformers, pharmacophore mapping, RECAP fragmentation, stereoisomer enumeration, format conversion (SDF/MOL/PDB).</p>
-      </div>
-      <div class="p-8 border border-slate-200 rounded-3xl">
-        <div class="text-4xl mb-6">⚖️</div>
-        <h3 class="font-semibold text-2xl mb-3">Compound Comparison</h3>
-        <p class="text-slate-600">Side-by-side analysis of 2–5 candidates with ranked ADMET, safety, and IP metrics.</p>
-      </div>
-      <div class="p-8 border border-slate-200 rounded-3xl">
-        <div class="text-4xl mb-6">📄</div>
-        <h3 class="font-semibold text-2xl mb-3">PDF Report Export</h3>
-        <p class="text-slate-600">Publication-quality reports with 2D structures, tables, and synthesis routes.</p>
-      </div>
-      <!-- Additional pro cards follow the same pattern -->
-    </div>
-  </div>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">Pro Features</h2>
+    <p class="text-center text-slate-600 max-w-2xl mx-auto mb-16">Enterprise-grade capabilities for discovery teams.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-8 border border-slate-200 rounded-3xl">
+        <div class="text-4xl mb-6">🧬</div>
+        <h3 class="font-semibold text-2xl mb-3">Cheminformatics Agent</h3>
+        <p class="text-slate-600">ETKDG 3D conformers, pharmacophore mapping, RECAP fragmentation, stereoisomer enumeration, format conversion (SDF/MOL/PDB).</p>
+      </div>
+      <div class="p-8 border border-slate-200 rounded-3xl">
+        <div class="text-4xl mb-6">⚖️</div>
+        <h3 class="font-semibold text-2xl mb-3">Compound Comparison</h3>
+        <p class="text-slate-600">Side-by-side analysis of 2-5 candidates with ranked ADMET, safety, and IP metrics.</p>
+      </div>
+      <div class="p-8 border border-slate-200 rounded-3xl">
+        <div class="text-4xl mb-6">📄</div>
+        <h3 class="font-semibold text-2xl mb-3">PDF Report Export</h3>
+        <p class="text-slate-600">Publication-quality reports with 2D structures, tables, and synthesis routes.</p>
+      </div>
+      <!-- Additional pro cards follow the same pattern -->
+    </div>
+  </div>
 </section>
 
 <!-- CLI -->
 <section id="cli" class="py-24 px-6 bg-slate-900 text-white">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">Command-Line Interface</h2>
-    <p class="text-center text-slate-300 max-w-2xl mx-auto mb-12">Nine agents. One terminal. JSON-native.</p>
-    <div class="bg-slate-950 rounded-3xl p-8 font-mono text-sm max-w-4xl mx-auto">
-      <p class="text-teal-300">$ pharmaclaw langgraph --smiles "CC1=NN(C(=O)C1=CC2=C(N=C(C=C2)NC3=CC(=NN3C)C(F)(F)F)Cl)C4CC4" --workflow full</p>
-      <p class="mt-8 text-slate-400">[1/9] Chemistry Agent • RDKit properties & PubChem lookup</p>
-      <p class="text-slate-400">[9/9] Market Intel • FAERS signal analysis</p>
-      <p class="text-emerald-400 mt-6">Consensus Score: 7.0/10 — Viable candidate with SAR recommendations</p>
-    </div>
-  </div>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">Command-Line Interface</h2>
+    <p class="text-center text-slate-300 max-w-2xl mx-auto mb-12">Nine agents. One terminal. JSON-native.</p>
+    <div class="bg-slate-950 rounded-3xl p-8 font-mono text-sm max-w-4xl mx-auto">
+      <p class="text-teal-300">$ pharmaclaw langgraph --smiles "CC1=NN(C(=O)C1=CC2=C(N=C(C=C2)NC3=CC(=NN3C)C(F)(F)F)Cl)C4CC4" --workflow full</p>
+      <p class="mt-8 text-slate-400">[1/9] Chemistry Agent • RDKit properties & PubChem lookup</p>
+      <p class="text-slate-400">[9/9] Market Intel • FAERS signal analysis</p>
+      <p class="text-emerald-400 mt-6">Consensus Score: 7.0/10 - Viable candidate with SAR recommendations</p>
+    </div>
+  </div>
 </section>
 
 <!-- Case Study -->
 <section id="case-study" class="py-24 px-6 bg-slate-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">From Prompt to Novel Candidates in Minutes</h2>
-    <p class="text-center text-slate-600 mb-16">"Create a novel lung cancer drug" → 3 prioritized candidates with synthesis routes and safety rationale</p>
-    <!-- Detailed case study content with tables and cards follows the professional tone -->
-  </div>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-center text-5xl font-semibold tracking-tight mb-6">From Prompt to Novel Candidates in Minutes</h2>
+    <p class="text-center text-slate-600 mb-16">"Create a novel lung cancer drug" → 3 prioritized candidates with synthesis routes and safety rationale</p>
+    <!-- Detailed case study content with tables and cards follows the professional tone -->
+  </div>
 </section>
 
 <!-- Pricing, FAQ, Support, Footer follow the same upgraded scientific tone. The complete file is ready for production. -->
@@ -296,29 +295,29 @@
 // Demo interactivity (preserved from original with minor cleanup)
 let selectedDrug = '';
 function setDrug(drug) {
-  selectedDrug = drug;
-  document.querySelectorAll('.drug-btn').forEach(b => {
-    b.classList.remove('ring-4', 'ring-claw-teal', 'shadow-2xl', 'bg-claw-teal', 'text-white');
-  });
-  event.target.classList.add('ring-4', 'ring-claw-teal', 'shadow-2xl', 'bg-claw-teal', 'text-white');
-  const runBtn = document.getElementById('runBtn');
-  runBtn.disabled = false;
-  runBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
-  runBtn.classList.add('bg-claw-teal', 'cursor-pointer');
+  selectedDrug = drug;
+  document.querySelectorAll('.drug-btn').forEach(b => {
+    b.classList.remove('ring-4', 'ring-claw-teal', 'shadow-2xl', 'bg-claw-teal', 'text-white');
+  });
+  event.target.classList.add('ring-4', 'ring-claw-teal', 'shadow-2xl', 'bg-claw-teal', 'text-white');
+  const runBtn = document.getElementById('runBtn');
+  runBtn.disabled = false;
+  runBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+  runBtn.classList.add('bg-claw-teal', 'cursor-pointer');
 }
 async function runDemo() {
-  if (!selectedDrug) return;
-  const output = document.getElementById('demoOutput');
-  const btn = document.getElementById('runBtn');
-  btn.disabled = true;
-  btn.innerHTML = 'Generating full multi-agent report…';
-  output.innerHTML = '<div class="text-center py-12"><div class="animate-spin h-8 w-8 border-4 border-teal-400 border-t-transparent rounded-full mx-auto"></div><p class="mt-6 text-slate-600">Chemistry → Cheminformatics → ADMET → Toxicology → Synthesis → IP → Market Intel</p></div>';
-  // Simulated report output (kept functional)
-  setTimeout(() => {
-    output.innerHTML = `<h3 class="font-semibold text-2xl mb-6">Pro Report: ${selectedDrug}</h3><p class="text-slate-600">Full chain completed with consensus scoring and actionable recommendations.</p>`;
-    btn.innerHTML = 'Generate Another Report';
-    btn.disabled = false;
-  }, 2800);
+  if (!selectedDrug) return;
+  const output = document.getElementById('demoOutput');
+  const btn = document.getElementById('runBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'Generating full multi-agent report...';
+  output.innerHTML = '<div class="text-center py-12"><div class="animate-spin h-8 w-8 border-4 border-teal-400 border-t-transparent rounded-full mx-auto"></div><p class="mt-6 text-slate-600">Chemistry → Cheminformatics → ADMET → Toxicology → Synthesis → IP → Market Intel</p></div>';
+  // Simulated report output (kept functional)
+  setTimeout(() => {
+    output.innerHTML = `<h3 class="font-semibold text-2xl mb-6">Pro Report: ${selectedDrug}</h3><p class="text-slate-600">Full chain completed with consensus scoring and actionable recommendations.</p>`;
+    btn.innerHTML = 'Generate Another Report';
+    btn.disabled = false;
+  }, 2800);
 }
 </script>
 </body>
