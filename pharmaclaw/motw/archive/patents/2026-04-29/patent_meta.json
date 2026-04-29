@@ -1,0 +1,14 @@
+{
+  "compound_name": "PCL-AI-007",
+  "smiles": "O=C(Nc1ccc(-c2c[nH]c3ncc(C4CC4)nc23)cc1)c1cc(F)cnc1",
+  "disease": "Pulmonary Arterial Hypertension (PAH)",
+  "target": "Soluble Guanylate Cyclase (sGC)",
+  "molecular_formula": "C21H16FN5O",
+  "molecular_weight": 373.39,
+  "InChIKey": "UECWFEMJQBJFMZ-UHFFFAOYSA-N",
+  "num_claims": 15,
+  "bioisostere_count": 2,
+  "generated_date": "2026-04-29",
+  "status": "DRAFT \u2014 NOT FILED",
+  "disclaimer": "This is an AI-generated draft for review by a registered patent attorney. Not legal advice."
+}

@@ -1,0 +1,14 @@
+{
+  "compound_name": "PCL-AI-003",
+  "smiles": "CC1=NC(=CS1)NC2=NC=C(C=C2)C(=O)NC3CCCCC3",
+  "disease": "Rheumatoid Arthritis",
+  "target": "JAK1/JAK2",
+  "molecular_formula": "C16H20N4OS",
+  "molecular_weight": 316.43,
+  "InChIKey": "LYYDADQMESEQID-UHFFFAOYSA-N",
+  "num_claims": 15,
+  "bioisostere_count": 1,
+  "generated_date": "2026-04-08",
+  "status": "DRAFT \u2014 NOT FILED",
+  "disclaimer": "This is an AI-generated draft for review by a registered patent attorney. Not legal advice."
+}
