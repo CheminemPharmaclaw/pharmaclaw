@@ -1,0 +1,72 @@
+[
+  {
+    "name": "s1_hook",
+    "start": 0.0,
+    "duration": 17.69
+  },
+  {
+    "name": "s2_pipeline",
+    "start": 18.29,
+    "duration": 46.34
+  },
+  {
+    "name": "s3_demo_intro",
+    "start": 65.23,
+    "duration": 8.3
+  },
+  {
+    "name": "s3_demo_report",
+    "start": 74.14,
+    "duration": 17.5
+  },
+  {
+    "name": "s3_demo_faers",
+    "start": 92.23,
+    "duration": 14.26
+  },
+  {
+    "name": "s3_demo_ip",
+    "start": 107.09,
+    "duration": 16.51
+  },
+  {
+    "name": "s4_pro",
+    "start": 124.2,
+    "duration": 26.71
+  },
+  {
+    "name": "s5_cli",
+    "start": 151.51,
+    "duration": 15.34
+  },
+  {
+    "name": "s5_langgraph",
+    "start": 167.45,
+    "duration": 32.93
+  },
+  {
+    "name": "s6_case_intro",
+    "start": 200.98,
+    "duration": 5.33
+  },
+  {
+    "name": "s6_case_faers",
+    "start": 206.9,
+    "duration": 12.55
+  },
+  {
+    "name": "s6_case_compounds",
+    "start": 220.06,
+    "duration": 17.06
+  },
+  {
+    "name": "s6_case_compare",
+    "start": 237.72,
+    "duration": 15.53
+  },
+  {
+    "name": "s7_close",
+    "start": 253.85,
+    "duration": 19.51
+  }
+]
