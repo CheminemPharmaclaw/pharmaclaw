@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmaClaw 🧪 Molecule of the Week Preview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = {theme: {extend: {colors: {'claw-purple': '#667eea'}}}}</script>
+<style>
+  @keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(102,126,234,0.3)} 50%{box-shadow:0 0 40px rgba(102,126,234,0.6)} }
+  .glow { animation: pulse-glow 3s ease-in-out infinite; }
+  @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  .fade-up { animation: fadeInUp 0.8s ease-out; }
+  .fade-up-delay { animation: fadeInUp 0.8s ease-out 0.2s both; }
+  .fade-up-delay2 { animation: fadeInUp 0.8s ease-out 0.4s both; }
+</style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 min-h-screen text-white">
+
+<section id="motw" class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-8 fade-up">
+      <span class="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg">
+        🧬 Molecule of the Week · May 6, 2026
+      </span>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl overflow-hidden glow fade-up-delay">
+      <div class="grid lg:grid-cols-2 gap-0">
+
+        <div class="p-12 flex flex-col items-center justify-center bg-gradient-to-br from-white/10 to-white/5">
+          <div class="bg-white rounded-2xl p-6 shadow-xl mb-6">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAIAAAAP3aGbAAAqlklEQVR4nO3deVzU1f4/8PcMICiIK8qi5nVJ1HBDRWRx4+cWLtlFv5amtmim0XXpcsvM1puVJlqWpFm2qBfTXFNARVlcR0BFU8FdUMBYRPZh3r8/jowjbiifWY68ng//gAE+nzMjvObzOed9zlExMwEAyEBt7gYAAFQVAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAGAgsApIHAAgBpILAAQBoILACQBgILAKSBwAIAaSCwAEAaCCwAkAYCCwCkgcACAGkgsABAGggsAJAG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" alt="PCL-RA-003 2D Structure (Thiophene-Piperazine JAK2 inhibitor)" class="w-72 h-72 object-contain">
+          </div>
+          <h2 class="text-4xl font-black bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-2">PCL-RA-003</h2>
+          <p class="text-lg text-indigo-300 font-semibold">Novel Thiophene-Piperazine JAK2 Inhibitor for RA</p>
+          <p class="text-sm text-gray-400 mt-2 font-mono">Cc1ccc(s1)C(=O)Nc2ccc(cc2)N3CCN(CC3)Cc4ccccc4</p>
+        </div>
+
+        <div class="p-12">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">🫀</span>
+              <div>
+                <h3 class="text-2xl font-bold text-white">Rheumatoid Arthritis (Autoimmune)</h3>
+                <p class="text-indigo-300 text-sm">JAK2 inhibitor with novel thiophene-carboxamide scaffold</p>
+              </div>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Designed as a selective JAK2 inhibitor for Rheumatoid Arthritis. The thiophene-carboxamide scaffold mimics key interactions in the JAK2 ATP-binding pocket, while the piperazine linker with benzyl substitution improves selectivity over other JAK family members. This avoids the pyrimidine-pyrrolopyrimidine cores common in approved drugs like tofacitinib, creating novel IP space. Low IP risk (max Tanimoto 0.22 vs known JAK inhibitors).
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg">
+              <span class="text-3xl font-black">6.8</span>
+            </div>
+            <div>
+              <p class="text-lg font-bold text-emerald-400">GOOD — viable with modifications</p>
+              <p class="text-sm text-gray-400">PharmaClaw Consensus Score (0-10)</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 mb-8">
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">MW</p>
+              <p class="text-xl font-bold text-white">381.5</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">LogP</p>
+              <p class="text-xl font-bold text-white">3.87</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">TPSA</p>
+              <p class="text-xl font-bold text-white">57.8</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">QED</p>
+              <p class="text-xl font-bold text-amber-400">0.834</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">Tox Risk</p>
+              <p class="text-xl font-bold text-emerald-400">LOW</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">ChEMBL</p>
+              <p class="text-xl font-bold text-emerald-400">NOVEL</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">Lipinski</p>
+              <p class="text-lg font-bold text-emerald-400">✅ PASS</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">SA Score</p>
+              <p class="text-xl font-bold text-emerald-400">1.95</p>
+            </div>
+            <div class="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+              <p class="text-xs text-gray-400 uppercase">GI Absorb</p>
+              <p class="text-lg font-bold text-emerald-400">HIGH</p>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-xs text-gray-400 uppercase mb-2 font-bold tracking-wide">Agents Consulted</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Chemistry Query</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Cheminformatics</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Pharmacology</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Toxicology</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Synthesis</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Catalyst Design</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">Literature</span>
+              <span class="bg-claw-purple/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-claw-purple/30">IP Expansion</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs text-gray-400 uppercase mb-2 font-bold tracking-wide">Design Highlights</p>
+            <ul class="text-sm text-gray-300 space-y-1">
+              <li>→ Thiophene-piperazine core targeting JAK2 for Rheumatoid Arthritis</li>
+              <li>→ Benzyl piperazine substitution enhances selectivity and potency</li>
+              <li>→ Thiophene ring provides unique electronic properties for binding</li>
+              <li>→ Low IP risk (max Tanimoto 0.22 vs known JAK inhibitors)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/5 border-t border-white/10 px-12 py-4 flex justify-between items-center">
+        <p class="text-xs text-gray-500">Generated by PharmaClaw AI Pipeline v2.1.0 · 8 agents · Autoimmune category</p>
+        <a href="archive.html" class="text-xs text-claw-purple hover:text-indigo-300 font-bold">View Archive →</a>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-gray-600 mt-6 fade-up-delay2">
+      ⚠️ For research purposes only. Not a therapeutic recommendation. All novel molecules are computationally generated and require experimental validation.
+    </p>
+
+  </div>
+</section>
+
+</body>
+</html>

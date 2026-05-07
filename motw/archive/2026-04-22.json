@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-22",
+  "id": "PCL-AI-006",
+  "name": "Naphthyridine-glutarimide cereblon E3 ligase modulator",
+  "smiles": "O=C1CCC(=O)N1CC1=CN=C2C=C(Nc3ccc(N4CCOCC4)cc3)C=CC12",
+  "disease": "Multiple Myeloma",
+  "target": "CRBN-mediated IKZF1/IKZF3 degradation",
+  "mw": 404.5,
+  "logp": 2.49,
+  "tpsa": 74.2,
+  "qed": 0.764,
+  "hbd": 1,
+  "hba": 6,
+  "lipinski_violations": 0,
+  "consensus_score": 7.8,
+  "tox_risk": "Low",
+  "ip_risk": "Moderate",
+  "image": "molecule_pcl006.png"
+}
