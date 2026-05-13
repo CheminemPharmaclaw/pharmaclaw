@@ -1,0 +1,14 @@
+{
+  "compound_name": "PCL-PD-008",
+  "smiles": "O=C(c1cc(F)cc(F)c1)N1CCN(c2cn3cc(-c4ccnc(NC5CC5)n4)ccc3n2)CC1",
+  "disease": "Pancreatic Ductal Adenocarcinoma",
+  "target": "KRAS G12D",
+  "molecular_formula": "C25H23F2N7O",
+  "molecular_weight": 475.5,
+  "InChIKey": "XPXJVGSSOQJYDI-UHFFFAOYSA-N",
+  "num_claims": 15,
+  "bioisostere_count": 2,
+  "generated_date": "2026-05-13",
+  "status": "DRAFT \u2014 NOT FILED",
+  "disclaimer": "This is an AI-generated draft for review by a registered patent attorney. Not legal advice."
+}
